@@ -1,18 +1,34 @@
-# React + Vite
+# 끝말잇기 게임
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## 프로젝트 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React와 Vite를 사용해 만든 간단한 끝말잇기 웹 게임입니다. 화면에 제시된 단어의 마지막 글자에 맞춰 사용자가 다음 단어를 입력하면 정답 여부를 확인하고, 올바른 단어일 경우 현재 단어가 새 입력값으로 변경됩니다.
 
-## React Compiler
+## 주요 기능
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 시작 단어를 기준으로 끝말잇기 진행
+- 사용자가 입력한 단어의 첫 글자와 현재 단어의 마지막 글자 비교
+- 조건에 맞는 단어를 입력하면 다음 단어로 업데이트
+- 조건에 맞지 않거나 빈 값을 입력하면 안내 메시지 표시
+- Enter 키 또는 확인 버튼으로 입력 제출
+- 입력창 자동 포커스 적용
 
-Note: This will impact Vite dev & build performances.
+## 사용 기술
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- SCSS
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 느낀점 / 개선할 점
+
+이번 프로젝트를 통해 React의 `useState`, `useEffect`, `useRef`를 활용해 사용자의 입력값과 화면 상태를 관리하는 방법을 연습할 수 있었습니다. 특히 입력값 검증, 조건에 따른 메시지 출력, Enter 키 이벤트 처리처럼 작은 기능들이 모여 하나의 인터랙티브한 게임 흐름을 만드는 과정을 경험했습니다.
+
+개선할 점으로는 현재 코드의 한글 문자열이 인코딩 문제로 깨져 있어 사용자에게 보이는 문구를 정상적인 한글로 수정할 필요가 있습니다. 또한 실제 끝말잇기처럼 이미 사용한 단어를 다시 입력하지 못하게 하거나, 단어 목록/API를 활용해 존재하는 단어인지 검증하는 기능을 추가하면 게임의 완성도를 더 높일 수 있습니다. 점수, 제한 시간, 게임 재시작 기능을 추가하는 것도 좋은 확장 방향입니다.
+=======
+간단한 리엑트만으로 작성한 끝말잇기 게임입니다.
+
+단어 입력 후 마지막 글자를 감지하여 그 다음 단어의 첫 글자를 확인하여 동일한지 확인 후 맞다면 다음 단어로, 다르다면 현재 단어에서 변하지 않는 게임입니다.
+>>>>>>> 088bf689843752a8eabe08715755d068148bba0c
